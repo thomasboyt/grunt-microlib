@@ -128,7 +128,7 @@ module.exports.init = function(grunt) {
       },
 
       browser: {
-        src: ['vendor/loader.js', 'tmp/<%= cfg.barename %>/**/*.amd.js', 'tmp/<%= cfg.barename %>.amd.js'],
+        src: ['node_modules/grunt-ember-dev/assets/loader.js', 'tmp/<%= cfg.barename %>/**/*.amd.js', 'tmp/<%= cfg.barename %>.amd.js'],
         dest: 'tmp/<%= cfg.barename %>.browser1.js'
       },
     },
@@ -142,7 +142,7 @@ module.exports.init = function(grunt) {
 
     buildTests: {
       dist: {
-        src: ['vendor/loader.js', 'tmp/tests.amd.js', 'tmp/<%= cfg.barename %>/**/*.amd.js', 'tmp/<%= cfg.barename %>.amd.js'],
+        src: ['node_modules/grunt-ember-dev/assets/loader.js', 'tmp/tests.amd.js', 'tmp/<%= cfg.barename %>/**/*.amd.js', 'tmp/<%= cfg.barename %>.amd.js'],
         dest: 'tmp/tests.js'
       }
     },
