@@ -6,7 +6,7 @@ module.exports.init = function(grunt) {
   this.registerTask('default', ['build']);
 
   // Build test files
-  this.registerTask('tests', "Builds the test package", ['concat:deps', 'browserify:tests', 'transpile:testsAmd', 'transpile:testsCommonjs', 'buildTests:dist', 'concat:tests']);
+  this.registerTask('tests', "Builds the test package", ['concat:deps', 'browserify:tests', 'transpile:testsAmd', 'transpile:testsCommonjs', 'buildTests:dist']);
 
   // Run client-side tests on the command line.
   this.registerTask('test', "Runs tests through the command line using PhantomJS", ['build', 'tests', 'connect', 'qunit']);
