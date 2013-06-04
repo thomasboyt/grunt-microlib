@@ -70,12 +70,12 @@ module.exports.init = function(grunt) {
           expand: true,
           cwd: 'lib/',
           src: ['<%= cfg.barename %>/*.js'],
-          dest: 'node_modules/',
+          dest: 'dist/commonjs/',
           ext: '.js'
         },
         {
           src: ['lib/<%= cfg.barename %>.js'],
-          dest: 'main.js'
+          dest: 'dist/commonjs/main.js'
         }]
       },
 
