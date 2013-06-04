@@ -1,14 +1,14 @@
 {
-  "name": "grunt-ember-dev",
+  "name": "grunt-microlib",
   "version": "0.1.0",
-  "description": "Shared tooling between Ember.js microlibraries.",
+  "description": "Shared tooling between microlibraries using the ES6 module transpiler.",
   "main": "main.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/thomasboyt/ember-dev.git"
+    "url": "git://github.com/thomasboyt/grunt-microlib.git"
   },
   "bugs": {
-    "url": "https://github.com/thomasboyt/ember-dev/issues"
+    "url": "https://github.com/thomasboyt/grunt-microlib/issues"
   },
   "keywords": [
     "ember"
