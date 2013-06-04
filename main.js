@@ -16,7 +16,7 @@ module.exports.init = function(grunt) {
 
   // Load tasks from npm
   var cwd = process.cwd();
-  grunt.file.setBase(__dirname); // load tasks relative from ember-dev
+  grunt.file.setBase(__dirname); // load tasks relative from grunt-microlib
 
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-concat');
@@ -128,7 +128,7 @@ module.exports.init = function(grunt) {
       },
 
       browser: {
-        src: ['node_modules/grunt-ember-dev/assets/loader.js', 'tmp/<%= cfg.barename %>/**/*.amd.js', 'tmp/<%= cfg.barename %>.amd.js'],
+        src: ['node_modules/grunt-microlib/assets/loader.js', 'tmp/<%= cfg.barename %>/**/*.amd.js', 'tmp/<%= cfg.barename %>.amd.js'],
         dest: 'tmp/<%= cfg.barename %>.browser1.js'
       },
     },
@@ -142,7 +142,7 @@ module.exports.init = function(grunt) {
 
     buildTests: {
       dist: {
-        src: ['node_modules/grunt-ember-dev/assets/loader.js', 'tmp/tests.amd.js', 'tmp/<%= cfg.barename %>/**/*.amd.js', 'tmp/<%= cfg.barename %>.amd.js'],
+        src: ['node_modules/grunt-microlib/assets/loader.js', 'tmp/tests.amd.js', 'tmp/<%= cfg.barename %>/**/*.amd.js', 'tmp/<%= cfg.barename %>.amd.js'],
         dest: 'tmp/tests.js'
       }
     },
