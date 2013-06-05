@@ -1,10 +1,10 @@
-# grunt-ember-dev
+# grunt-microlib
 
-Shared tooling between Ember.js microlibraries that use the ES6 module transpiler and a compatible folder structure.
+Shared tooling between microlibraries that use the ES6 module transpiler and a compatible folder structure. Currently used in [rsvp.js](https://github.com/tildeio/rsvp.js).
 
 ## Developing
 
-Any package that uses grunt-ember-dev has the following tasks:
+Any package that uses grunt-microlib has the following tasks:
 
 * `grunt build` - Output AMD, CommonJS, and loader-wrapped (browser) versions of the project.
 * `grunt tests` - Build AMD and CommonJS tests.
