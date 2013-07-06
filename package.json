@@ -18,7 +18,7 @@
   "dependencies": {
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-connect": "~0.3.0",
-    "grunt-es6-module-transpiler": "git://github.com/thomasboyt/grunt-es6-module-transpiler.git",
+    "grunt-es6-module-transpiler": "git://github.com/joefiorini/grunt-es6-module-transpiler.git",
     "grunt-contrib-watch": "~0.4.4",
     "grunt-contrib-uglify": "~0.2.1",
     "grunt": "~0.4.1",
