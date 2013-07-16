@@ -2,7 +2,12 @@ module.exports.init = function(grunt) {
   var nameFor = require('./lib/util').nameFor;
 
   // Build a new version of the library
-  this.registerTask('build', "Builds a distributable version of <%= cfg.name %>", ['clean', 'transpile:amd', 'transpile:commonjs', 'concat:amd', 'concat:browser', 'browser:dist', 'jshint', 'uglify']);
+  this.registerTask('build', "Builds a distributable version of <%= cfg.name %>", ['clean', 'transpile:amd', 'transpile:commonjs', 'concat:amd', 'concat:browser', 'browser:dist', 'jshint', 'uglify:browser']);
+  // Build a new version of the library but without naming the files
+  // using pkg.version
+  this.registerTask('buildNoVersion',
+                    "Builds a distributable version of <%= cfg.name %>, without naming the file with a version",
+                    ['clean', 'transpile:amd', 'transpile:commonjs', 'concat:amdNoVersion', 'concat:browser', 'browser:distNoVersion', 'uglify:browserNoVersion']);
   this.registerTask('default', ['build']);
 
   // Build test files
@@ -102,6 +107,14 @@ module.exports.init = function(grunt) {
         files: {
           'dist/<%= pkg.name %>-<%= pkg.version %>.min.js': ['dist/<%= pkg.name %>-<%= pkg.version %>.js'],
         }
+      },
+      browserNoVersion: {
+        options: {
+          mangle: true
+        },
+        files: {
+          'dist/<%= pkg.name %>.min.js': ['dist/<%= pkg.name %>.js'],
+        }
       }
     },
 
@@ -122,6 +135,11 @@ module.exports.init = function(grunt) {
         dest: 'dist/<%= pkg.name %>-<%= pkg.version %>.amd.js'
       },
 
+      amdNoVersion: {
+        src: ['tmp/<%= cfg.barename %>/**/*.amd.js', 'tmp/<%= cfg.barename %>.amd.js'],
+        dest: 'dist/<%= pkg.name %>.amd.js'
+      },
+
       deps: {
         src: ['vendor/deps/*.js'],
         dest: 'tmp/deps.amd.js'
@@ -137,6 +155,10 @@ module.exports.init = function(grunt) {
       dist: {
         src: 'tmp/<%= cfg.barename %>.browser1.js',
         dest: 'dist/<%= pkg.name %>-<%= pkg.version %>.js'
+      },
+      distNoVersion: {
+        src: 'tmp/<%= cfg.barename %>.browser1.js',
+        dest: 'dist/<%= pkg.name %>.js'
       }
     },
 
