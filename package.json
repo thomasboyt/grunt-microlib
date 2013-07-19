@@ -1,6 +1,6 @@
 {
   "name": "grunt-microlib",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shared tooling between microlibraries using the ES6 module transpiler.",
   "main": "main.js",
   "repository": {
